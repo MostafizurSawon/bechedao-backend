@@ -40,6 +40,7 @@ class Product(models.Model):
     description = models.TextField()
     created_on = models.DateField(auto_now_add=True, null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
+    mobile = models.CharField(max_length=15)
     Negotiable = models.BooleanField(default=False, blank=True)
     sold = models.BooleanField(default=False, blank=True)
     
