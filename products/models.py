@@ -41,6 +41,7 @@ class Product(models.Model):
     created_on = models.DateField(auto_now_add=True, null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
     Negotiable = models.BooleanField(default=False, blank=True)
+    sold = models.BooleanField(default=False, blank=True)
     
     def __str__(self):
         return f"{self.name} of Mr. {self.user.first_name} {self.user.last_name}"
